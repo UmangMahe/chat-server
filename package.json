@@ -1,0 +1,47 @@
+{
+  "name": "learning_project",
+  "version": "1.0.0",
+  "description": "Learning Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server",
+    "dev": "cross-env NODE_ENV=development nodemon server",
+    "dev-no-crash": "cross-env NODE_ENV=development-no-crash nodemon server",
+    "cron-dev": "cross-env nodemon cron/index.js",
+    "cron": "node cron/index.js",
+    "development": "concurrently \"npm run dev\" \"npm run cron-dev\"",
+    "prod": "concurrently \"npm run start\" \"npm run cron\""
+  },
+  "author": "Umang Maheshwari",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "concurrently": "^8.2.1",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "country-calling-code": "^0.0.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-formidable": "^1.2.0",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^9.0.1",
+    "memorystore": "^1.6.7",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.2",
+    "node-cron": "^3.0.2",
+    "otp-generator": "^4.0.1",
+    "passport": "^0.6.0",
+    "passport-oauth2": "^1.6.1",
+    "socket.io": "^4.4.1",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  }
+}
