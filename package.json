@@ -15,7 +15,7 @@
   "author": "Umang Maheshwari",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.26.1",
+    "axios": "^1.6.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.1",
     "concurrently": "^8.2.1",
